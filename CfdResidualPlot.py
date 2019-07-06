@@ -27,6 +27,10 @@ from PySide import QtCore
 import FreeCAD
 try:
     import Plot
+    try:
+        Plot.figure
+    except AttributeError:
+        from Plot import Plot
 except ImportError:
     from freecad.plot import Plot
 import math
